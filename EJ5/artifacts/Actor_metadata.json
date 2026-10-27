@@ -1,0 +1,203 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "valor",
+						"type": "uint256"
+					}
+				],
+				"name": "aportar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cf",
+				"outputs": [
+					{
+						"internalType": "contract CrowdfundingHitos",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint96",
+						"name": "objetivo",
+						"type": "uint96"
+					},
+					{
+						"internalType": "uint40",
+						"name": "duracion",
+						"type": "uint40"
+					},
+					{
+						"internalType": "uint96[]",
+						"name": "importes",
+						"type": "uint96[]"
+					}
+				],
+				"name": "crear",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "reembolsar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retirar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "solicitar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract CrowdfundingHitos",
+						"name": "_cf",
+						"type": "address"
+					}
+				],
+				"name": "vincular",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "aFavor",
+						"type": "bool"
+					}
+				],
+				"name": "votar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/CrowdfundingHitos_test.sol": "Actor"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CrowdfundingHitos.sol": {
+			"keccak256": "0x8b16e98ebd9d19a0b60d59d10e97b4f135044c86aec1a4f88db5101d94bab946",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3f5525ee2b572b61f3c663bc0090feb69b804972c98fc560f8d9ac7ab188ce54",
+				"dweb:/ipfs/QmajyWjgRq69QtHuanxt8vMUs2LqQcNubqk7gh83kvor22"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/CrowdfundingHitos_test.sol": {
+			"keccak256": "0xeb8b2a562562c80b3f197bcf43036dcb28cf8e6433fa39fd1d1ee3664e34df92",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7cb108f0952acb15218d0545976c143ae068f8198c8fddc2e333b405d64364be",
+				"dweb:/ipfs/QmXmBFabHQCb2XqSy7kRkmTGzRGx5oF9E96SR8JpdsirDL"
+			]
+		}
+	},
+	"version": 1
+}
