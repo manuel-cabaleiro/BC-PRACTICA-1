@@ -104,7 +104,7 @@ contract CrowdfundingHitos {
         if (n == 0 || n > MAX_HITOS) revert DatosInvalidos();
         if (duracion == 0 || duracion > DURACION_MAX_FINANCIACION) revert DatosInvalidos();
 
-        id = numCampanas++;
+        unchecked { id = numCampanas++; }
 
         uint256 suma;
         for (uint256 i; i < n; ) {
@@ -112,7 +112,7 @@ contract CrowdfundingHitos {
             if (importe == 0) revert DatosInvalidos();
             suma += importe;
             hitos[id][i].importe = importe;
-            i++;
+            unchecked { i++; }
         }
         if (suma != objetivo) revert DatosInvalidos();
 
@@ -237,7 +237,7 @@ contract CrowdfundingHitos {
 
         uint256 recaudado = c.recaudado; // > 0 porque aportado > 0
         uint256 importe;
-        importe = aportado * (recaudado - c.liberado) / recaudado; 
+        unchecked { importe = aportado * (recaudado - c.liberado) / recaudado; } 
 
         if (importe != 0) {
             (bool ok, ) = payable(msg.sender).call{value: importe}("");
